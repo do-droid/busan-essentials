@@ -1,0 +1,42 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.do-droid/busan-essentials",
+  "description": "Busan public facility data (restrooms, pharmacies, WiFi, AEDs, tourist info, subway timetables) for AI agents helping foreign tourists.",
+  "repository": {
+    "url": "https://github.com/do-droid/busan-essentials",
+    "source": "github"
+  },
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registryType": "oci",
+      "identifier": "ghcr.io/do-droid/busan-essentials:0.1.0",
+      "transport": {
+        "type": "streamable-http",
+        "url": "TO_BE_FILLED_AFTER_CLOUD_RUN_DEPLOY"
+      }
+    }
+  ],
+  "tools": [
+    {
+      "name": "find_places",
+      "description": "Search for public facilities in Busan by type and conditions"
+    },
+    {
+      "name": "get_place_detail",
+      "description": "Get full details of a specific place by its ID"
+    },
+    {
+      "name": "find_nearby",
+      "description": "Find facilities near GPS coordinates, sorted by distance"
+    },
+    {
+      "name": "get_subway_timetable",
+      "description": "Get Busan subway timetable for a specific station"
+    },
+    {
+      "name": "submit_feedback",
+      "description": "Submit feedback about data quality, coverage, or feature requests"
+    }
+  ]
+}
