@@ -14,14 +14,14 @@ Busan Essentials is an MCP (Model Context Protocol) server that provides structu
 
 | Type | Description | Count |
 |------|-------------|-------|
-| `toilet` | Public restrooms across all 16 districts | TBD |
-| `pharmacy` | Pharmacies in Busan | TBD |
-| `wifi` | Free public WiFi hotspots | TBD |
-| `aed` | AED (defibrillator) locations | TBD |
-| `tourist_info` | Tourist information centers | TBD |
-| `subway` | Subway timetables (Busan Metro lines 1–4) | TBD |
+| `aed` | AED (defibrillator) locations | 2,799 |
+| `pharmacy` | Pharmacies in Busan | 1,667 |
+| `tourist_info` | Tourist information centers | 26 |
+| `toilet` | Public restrooms across all 16 districts | v0.1.1 |
+| `wifi` | Free public WiFi hotspots | v0.1.1 |
+| `subway` | Subway timetables (Busan Metro lines 1–4) | v0.1.1 |
 
-> Counts are filled in after the first data load. See **Known Data Limitations** below for subway coverage.
+> v0.1.0 ships `aed`, `pharmacy`, and `tourist_info` (live from data.go.kr). `toilet`/`wifi` (standard-data file source) and `subway` (Humetro) arrive in v0.1.1 — see **Known Data Limitations**.
 
 ## MCP Tools
 
@@ -73,7 +73,7 @@ Add to your MCP client config (e.g., Claude Desktop `claude_desktop_config.json`
 {
   "mcpServers": {
     "busan-essentials": {
-      "url": "https://busan-essentials-mcp-PLACEHOLDER/mcp"
+      "url": "https://busan-essentials-mcp-85013349489.asia-northeast3.run.app/mcp"
     }
   }
 }
@@ -121,7 +121,8 @@ We actively review and incorporate feedback to improve data quality and coverage
 
 ## Known Data Limitations
 
-- **`subway`**: V1.0 ships Busan Metro lines 1–4 (Busan Transportation Corp.). The **Donghae Line** (KORAIL) and **Busan–Gimhae Light Rail** are planned for V1.0.1, pending availability of their timetable APIs.
+- **`toilet` / `wifi`**: The national standard datasets for these are not served by an OpenAPI, so they are loaded from a downloaded standard-data file. They land in **v0.1.1**.
+- **`subway`**: v0.1.1 will ship Busan Metro lines 1–4 (Busan Transportation Corp.). The **Donghae Line** (KORAIL) and **Busan–Gimhae Light Rail** follow later, pending availability of their timetable APIs.
 - **`pharmacy`**: Sourced from the nationwide pharmacy dataset filtered to Busan. Foreign-language capability flags may be missing for rows where the upstream source does not provide them.
 
 ## Data Sources

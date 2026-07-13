@@ -13,7 +13,7 @@
       "identifier": "ghcr.io/do-droid/busan-essentials:0.1.0",
       "transport": {
         "type": "streamable-http",
-        "url": "TO_BE_FILLED_AFTER_CLOUD_RUN_DEPLOY"
+        "url": "https://busan-essentials-mcp-85013349489.asia-northeast3.run.app/mcp"
       }
     }
   ],
