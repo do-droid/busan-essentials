@@ -15,13 +15,13 @@ Busan Essentials is an MCP (Model Context Protocol) server that provides structu
 | Type | Description | Count |
 |------|-------------|-------|
 | `aed` | AED (defibrillator) locations | 2,799 |
+| `toilet` | Public restrooms across all 16 districts | 2,487 |
+| `wifi` | Free public WiFi hotspots | 1,702 |
 | `pharmacy` | Pharmacies in Busan | 1,667 |
 | `tourist_info` | Tourist information centers | 26 |
-| `toilet` | Public restrooms across all 16 districts | v0.1.1 |
-| `wifi` | Free public WiFi hotspots | v0.1.1 |
-| `subway` | Subway timetables (Busan Metro lines 1–4) | v0.1.1 |
+| `subway` | Subway timetables (Busan Metro lines 1–4) | soon |
 
-> v0.1.0 ships `aed`, `pharmacy`, and `tourist_info` (live from data.go.kr). `toilet`/`wifi` (standard-data file source) and `subway` (Humetro) arrive in v0.1.1 — see **Known Data Limitations**.
+> **8,681 places live** across 5 types (data.go.kr). `subway` (Humetro) is next — see **Known Data Limitations**. `toilet` coordinates fall back to the district centroid (the upstream standard dataset dropped its WGS84 columns); `wifi` has precise coordinates.
 
 ## MCP Tools
 
